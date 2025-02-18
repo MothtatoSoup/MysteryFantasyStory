@@ -8,22 +8,23 @@ let StoryTitle = document.getElementById("Title"); // The Title of the page
 let SceneTitle = document.getElementById("STitle"); // The title of the scene
 
 let StoryText = document.getElementById("SText"); // The story text
-const STxtList = ["Beggining Text", "Omg a change!!"];
+const STxtList = ["Beggining Text", "Omg a change!!"]; // List of content for the story text
 
-const StoryImages = ["FROG.jpg"]
 let SceneImage = document.getElementById("image"); // The images displayed
+const StoryImages = ["FROG.jpg"] // List of images for the scene
 
+// THE SCENE
 function SceneNum(num){
-    function ChangeStoryText(num) {
+    function ChangeStoryText(num) { // CHanges text based on scene
         StoryText.textContent = STxtList[num];
     }
 
-    function ChangeImage(num){
+    function ChangeImage(num){ // CHanges images based on scene based on scene
         SceneImage = SceneImage.src=StoryImages[num]; 
     }
 }
 
-SceneNum(0);
+SceneNum(0); // Sets it to the beginning scene
 
 
 // ---- INPUT ----
@@ -34,13 +35,17 @@ function isValidInput(input) { // Checks if the inputed value is correct
     if(input != "y" || "Y" || "yes" || "Yes"){
         if(input != "n" || "N" || "No" || "no"){
             if(input != 1 || 2){
-                ValidInput.textContent = "Not Valid Input Try again!!!";
-                IsValid = false;
+                IsValid = false
             }
         }
     }else{
         ValidInput.textContent = "";
         IsValid = true;
+    }
+    if(IsValid = false){
+        ValidInput.textContent = "Not Valid Input Try again!!!";
+    }else{
+        ValidInput.textContent = "";
     }
 }
 
