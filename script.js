@@ -1,17 +1,17 @@
 
 // C O D E   S E T    U P
-// HTML elements
+
+let TheScene = 0; // What scene it is on
 let StoryTitle = document.getElementById("Title"); // The Title of the page
 let SceneTitle = document.getElementById("STitle"); // The title of the scene
+
+// Story Text
 let StoryText = document.getElementById("SText"); // The story text
-
-
 const STxtList = ["Beggining Text", "Omg a change!!"];
 function ChangeStoryText(i) {
     StoryText.textContent = STxtList[i]
 }
-
-ChangeStoryText(0);
+ChangeStoryText(0); // Sets the story text to the first one!!
 
 let SceneImage = document.getElementById("image"); // The images displayed
 let UserInput = document.getElementById("UserAns"); // What the user inputted
@@ -19,12 +19,12 @@ let UserInput = document.getElementById("UserAns"); // What the user inputted
 // Valid Input Checker
 let ValidInput = document.getElementById("inputresponse");
 let IsValid = true;
-function isValidInput(input) {
+function isValidInput(input) { // Checks if the inputed value is correct
     if(input != "y" || "Y" || "yes" || "Yes"){
         if(input != "n" || "N" || "No" || "no"){
             if(input != 1 || 2){
-                ValidInput.textContent = "Not Valid Input!!";
-                IsValid = true;
+                ValidInput.textContent = "Not Valid Input Try again!!!";
+                IsValid = false;
             }
         }
     }else{
@@ -33,7 +33,7 @@ function isValidInput(input) {
     }
 }
 
-let TheScene = 0; // What scene it is on
+
 
 
 
