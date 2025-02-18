@@ -1,22 +1,33 @@
 
 // C O D E   S E T    U P
+// ---------------------------------
 
+// ---- STORY CONTENT ----
 let TheScene = 0; // What scene it is on
 let StoryTitle = document.getElementById("Title"); // The Title of the page
 let SceneTitle = document.getElementById("STitle"); // The title of the scene
 
-// Story Text
 let StoryText = document.getElementById("SText"); // The story text
 const STxtList = ["Beggining Text", "Omg a change!!"];
-function ChangeStoryText(i) {
-    StoryText.textContent = STxtList[i]
-}
-ChangeStoryText(0); // Sets the story text to the first one!!
 
+const StoryImages = ["FROG.jpg"]
 let SceneImage = document.getElementById("image"); // The images displayed
-let UserInput = document.getElementById("UserAns"); // What the user inputted
 
-// Valid Input Checker
+function SceneNum(num){
+    function ChangeStoryText(num) {
+        StoryText.textContent = STxtList[num];
+    }
+
+    function ChangeImage(num){
+        SceneImage = SceneImage.src=StoryImages[num]; 
+    }
+}
+
+SceneNum(0);
+
+
+// ---- INPUT ----
+let UserInput = document.getElementById("UserAns"); // What the user inputted
 let ValidInput = document.getElementById("inputresponse");
 let IsValid = true;
 function isValidInput(input) { // Checks if the inputed value is correct
