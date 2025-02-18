@@ -1,13 +1,22 @@
 
-/*Get references to HTML elements: Use document.getElementById() to get
-references to the HTML elements you created (paragraphs, buttons, image).
-Store these references in variables. For example: const image =
-document.getElementById('story-image');*/
+// HTML elements
+const StoryTitle = document.getElementById("Title");
+const SceneTitle = document.getElementById("SceneTitle");
+const StoryText = document.getElementById("StoryText");
+const SceneImage = 0; // Replace this w/ image (placeholder)
 
-const StoryTitle = document.getElementById("Title")
-const SceneTitle = document.getElementById("SceneTitle")
-const StoryText = document.getElementById("StoryText")
-const SceneImage = 0 // Replace this w/ image (placeholder)
+STxtList = ["Beggining Text", "Omg a change!!"];
+function ChangeStoryText(i) {
+    StoryText.textContent = STxtList[i]
+}
+
+ChangeStoryText(0);
+
+
+
+
+
+
 
 /* For Loop. Include at least one for loop in your story.
 ▪ Example: Gathering clues will add to an array of foundClues. Clicking
