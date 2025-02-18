@@ -1,9 +1,10 @@
 
+// C O D E   S E T    U P
 // HTML elements
 const StoryTitle = document.getElementById("Title");
-const SceneTitle = document.getElementById("SceneTitle");
-const StoryText = document.getElementById("StoryText");
-const SceneImage = 0; // Replace this w/ image (placeholder)
+const SceneTitle = document.getElementById("STitle");
+const StoryText = document.getElementById("SText");
+const SceneImage = document.getElementById("image"); 
 
 STxtList = ["Beggining Text", "Omg a change!!"];
 function ChangeStoryText(i) {
