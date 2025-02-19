@@ -27,7 +27,7 @@ function SceneNum(num){
     ChangeImage(num)
 }
 
-SceneNum(1); // Sets it to the beginning scene
+SceneNum(0); // Sets it to the beginning scene
 
 
 // ---- INPUT ----
