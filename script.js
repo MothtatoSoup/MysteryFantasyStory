@@ -7,7 +7,8 @@ let StoryTitle = document.getElementById("Title"); // The Title of the page
 let SceneTitle = document.getElementById("STitle"); // The title of the scene
 
 let StoryText = document.getElementById("SText"); // The story text
-const STxtList = ["At the corner of Elven St lies a small cafe emitting the heavenly smell of coffee. <br/> e" , "Omg a change!!"]; // List of content for the story text
+// List of content for the story text
+const STxtList = ["At the corner of Elven St lies a small cafe emitting the heavenly smell of coffee. <br/> It's Monday, so your favorite barista, Agis Helethana, is working. <br/> You do have to get to your office, but would a cup of coffee, or tea, really hurt?<br/><br/>What do you do?<br/>1: Head inside, say hello and get a drink<br/>2: Walk past and head straight to the office<br/>" , "Omg a change!!"]; 
 
 let SceneImage = document.getElementById("image"); // The images displayed
 const StoryImages = ["FROG.jpg"] // List of images for the scene
@@ -33,15 +34,12 @@ SceneNum(0); // Sets it to the beginning scene
 let UserInput = document.getElementById("UserAns"); // What the user inputted
 let ValidInput = document.getElementById("inputresponse");
 let IsValid = true;
+
+// My Actually end up doing something different later
 function isValidInput(input) { // Checks if the inputed value is correct
-    if(input != "y" || "Y" || "yes" || "Yes"){
-        if(input != "n" || "N" || "No" || "no"){
-            if(input != 1 || 2){
-                IsValid = false
-            }
-        }
+    if(input != 1 || 2){
+        IsValid = false;
     }else{
-        ValidInput.textContent = "";
         IsValid = true;
     }
     if(IsValid = false){
