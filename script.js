@@ -31,14 +31,16 @@ SceneNum(0); // Sets it to the beginning scene
 
 
 // ---- INPUT ----
-let UserInput = document.getElementById("UserAns").value; // What the user inputted
+let UserInput = document.getElementById("UserAns"); // What the user inputted
 let ValidInput = document.getElementById("inputresponse");
 
 
 // S T O R Y     C O D E
 // ---------------------------------
+
+// This doesn't work :(
 document.getAnimations("TheButton").addEventListener("onclick",function changeTheScene(){ //Event listener, this function will change the scene based on what is inputed
-    if (UserInput == 1){
+    if (UserInput.value == 1){
         ValidInput.textContent = "";
         if(TheScene == 0){
             SceneNum(1);
@@ -46,7 +48,7 @@ document.getAnimations("TheButton").addEventListener("onclick",function changeTh
             SceneNum(0);
         }
 
-    }else if(UserInput == 2){
+    }else if(UserInput.value == 2){
         ValidInput.textContent = "";
         if(TheScene == 0){
             // add code here
@@ -57,7 +59,7 @@ document.getAnimations("TheButton").addEventListener("onclick",function changeTh
     }else{
         ValidInput.textContent = "Not Valid Input Try again!!!";
     }
-}changeTheScene())
+})
 
 
 /* For Loop. Include at least one for loop in your story.
