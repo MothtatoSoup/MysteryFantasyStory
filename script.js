@@ -7,7 +7,7 @@ let StoryTitle = document.getElementById("Title"); // The Title of the page
 let SceneTitle = document.getElementById("STitle"); // The title of the scene
 
 let StoryText = document.getElementById("SText"); // The story text
-const STxtList = ["At the corner of Elven St lies a small cafe emitting the heavenly smell of coffee. <br> e ", "Omg a change!!"]; // List of content for the story text
+const STxtList = ["At the corner of Elven St lies a small cafe emitting the heavenly smell of coffee. <br/> e" , "Omg a change!!"]; // List of content for the story text
 
 let SceneImage = document.getElementById("image"); // The images displayed
 const StoryImages = ["FROG.jpg"] // List of images for the scene
@@ -15,13 +15,15 @@ const StoryImages = ["FROG.jpg"] // List of images for the scene
 // THE SCENE
 let TheScene = 0; // What scene it is on
 function SceneNum(num){
-    function ChangeStoryText(num) { // CHanges text based on scene
-        StoryText.textContent = STxtList[num];
+    function ChangeStoryText(x) { // CHanges text based on scene
+        StoryText.innerHTML = STxtList[x]; //I'm using innerHTML here so that I can do multilined strings
     }
 
-    function ChangeImage(num){ // CHanges images based on scene based on scene
-        SceneImage = SceneImage.src=StoryImages[num]; 
+    function ChangeImage(y){ // CHanges images based on scene based on scene
+        SceneImage = SceneImage.src=StoryImages[y]; 
     }
+    ChangeStoryText(num);
+    ChangeImage(num)
 }
 
 SceneNum(0); // Sets it to the beginning scene
