@@ -8,10 +8,10 @@ let SceneTitle = document.getElementById("STitle"); // The title of the scene
 
 let StoryText = document.getElementById("SText"); // The story text
 // List of content for the story text
-const STxtList = ["At the corner of Elven St lies a small cafe emitting the heavenly smell of coffee. <br/> It's Monday, so your favorite barista, Agis Helethana, is working. <br/> You do have to get to your office, but would a cup of coffee, or tea, really hurt?<br/><br/>What do you do?<br/>1: Head inside, say hello and get a drink<br/>2: Walk past and head straight to the office<br/>" , "Omg a change!!"]; 
+const STxtList = ["At the corner of Elven St lies a small cafe emitting the heavenly smell of coffee. <br/> It's Monday, so your favorite barista, Agis Helethana, is working. <br/> You do have to get to your office, but would a cup of coffee, or tea, really hurt?<br/><br/><br/>What do you do?<br/>1: You might have a client waiting, better head straight to work<br/>2: You are a bit early, stopping in to say hello and get a drink won't hurt<br/>" , "You decided it's best to head straight to work <br/> Though as you leave, you catch a glimse of Agis looking at you through the window <br/> You can't make out his face but you know he's disapointed. To bad for him<br/><br/><br/>  You arrive at work. The silence buzzing louder than usual.<br/>  Normally there's the goblins at the front desk.<br/>but they aren't there<br/><br/> Normally there's the cleaner faries.<br/>But they aren't there<br/><br/>Obviously. They get upset with even the smallest speck of dust so why would they ever allow a stain on the floor.<br/><br/><br/> <br/> ...<br/><br/><br/><br/>  A Stain on the floor...?<br/><br/><br/><br/> Before you can even examine it...<br/><br/> A loud ringing feels your ears<br/><br/>The world starts to blur tog3tHer<br/><br/>Y0u g3t v3Ry dzsy<br/><br/> S3e m0v3MenT<br/><br/><br/> b3cOme v3Ry br1Ght<br/><br/> VeRy waRm<br/> <br/> <br/> f1R3<br/><br/><br/><br/> 1: Resart "]; 
 
 let SceneImage = document.getElementById("image"); // The images displayed
-const StoryImages = ["FROG.jpg"] // List of images for the scene
+const StoryImages = ["FROG.jpg","FROG.jpg"] // List of images for the scene
 
 // THE SCENE
 let TheScene = 0; // What scene it is on
@@ -27,31 +27,39 @@ function SceneNum(num){
     ChangeImage(num)
 }
 
-SceneNum(0); // Sets it to the beginning scene
+SceneNum(1); // Sets it to the beginning scene
 
 
 // ---- INPUT ----
 let UserInput = document.getElementById("UserAns"); // What the user inputted
 let ValidInput = document.getElementById("inputresponse");
-let IsValid = true;
-
-// My Actually end up doing something different later
-function isValidInput(input) { // Checks if the inputed value is correct
-    if(input != 1 || 2){
-        IsValid = false;
-    }else{
-        IsValid = true;
-    }
-    if(IsValid = false){
-        ValidInput.textContent = "Not Valid Input Try again!!!";
-    }else{
-        ValidInput.textContent = "";
-    }
-}
 
 
 // S T O R Y     C O D E
 // ---------------------------------
+document.getAnimations("TheButton").addEventListener("click",function changeTheScene(){ //Event listener, this function will change the scene based on what is inputed
+    if (UserInput == 1){
+        ValidInput.textContent = "";
+        if(TheScene == 0){
+            SceneNum(1)
+        }else if(TheScene == 1){ // Scene #1 is an ending
+            SceneNum(0)
+        }
+
+    }else if(UserInput == 2){
+        ValidInput.textContent = "";
+        if(TheScene == 0){
+            // add code here
+        }if(TheScene == 1){ // Scene #1 is an ending, only accepts the input: 1
+            ValidInput.textContent = "Not Valid Input Try again!!!";
+        }
+
+    }else{
+        ValidInput.textContent = "Not Valid Input Try again!!!";
+    }
+}
+
+)
 
 
 /* For Loop. Include at least one for loop in your story.
