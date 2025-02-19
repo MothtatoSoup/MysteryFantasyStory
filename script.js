@@ -31,19 +31,19 @@ SceneNum(0); // Sets it to the beginning scene
 
 
 // ---- INPUT ----
-let UserInput = document.getElementById("UserAns"); // What the user inputted
+let UserInput = document.getElementById("UserAns").value; // What the user inputted
 let ValidInput = document.getElementById("inputresponse");
 
 
 // S T O R Y     C O D E
 // ---------------------------------
-document.getAnimations("TheButton").addEventListener("click",function changeTheScene(){ //Event listener, this function will change the scene based on what is inputed
+document.getAnimations("TheButton").addEventListener("onclick",function changeTheScene(){ //Event listener, this function will change the scene based on what is inputed
     if (UserInput == 1){
         ValidInput.textContent = "";
         if(TheScene == 0){
-            SceneNum(1)
+            SceneNum(1);
         }else if(TheScene == 1){ // Scene #1 is an ending
-            SceneNum(0)
+            SceneNum(0);
         }
 
     }else if(UserInput == 2){
@@ -57,9 +57,7 @@ document.getAnimations("TheButton").addEventListener("click",function changeTheS
     }else{
         ValidInput.textContent = "Not Valid Input Try again!!!";
     }
-}
-
-)
+}changeTheScene())
 
 
 /* For Loop. Include at least one for loop in your story.
@@ -68,23 +66,6 @@ the clues button should iterate through the clues array and display all
 foundClues.
 ▪ You could also use a for loop to apply multiple css stylings to a variety
 of elements.*/
-
-/* Event Listeners. When an event is triggered (like mouseclick), it should:
-▪ Change the text content of one or more paragraphs to advance the
-story. Use the textContent property of the paragraph element. For
-example: paragraph1.textContent = "You venture into the dark forest.";
-Not every event needs to change the image. It could simply
-advance the dialogue if needed.
-*hint* write a function to update the text box with the appropriate
-story text.
-▪ JavaScript DOM EventListener
-▪ Change the image displayed. Change the src attribute of the image
-element. For example: image.src = "forest.jpg"; Make sure you have
-image files named forest.jpg, etc., in the same directory as your HTML
-file. *hint* write a function to change images to the passed
-argument image src.
-▪ You must also modify the style (e.g., color, font) of some text using
-your .css file or inline JS code.*/
 
 /* Image Hover: When the user hovers over the image, display a tooltip or
 change the image to provide additional information or hints. Use the
