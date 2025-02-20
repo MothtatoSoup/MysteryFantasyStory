@@ -4,9 +4,39 @@
 * {
     text-align: center;
 }
+
 /* Style buttons */
 #TheButton {
- text.
+    color:#f5f2d0;
+    border: none;
+    background-color:#8f8c6f ;
+    border-radius: 4px;
+    padding: 3px 20px;
+    border: 1px solid #8f8c6f;
+}
+
+#TheButton:hover{
+    color:#8f8c6f;
+    background-color:#f5f2d0;
+    border: 1px solid #8f8c6f;
 }
 
 /* Style headers and text and bg */
+h1 {
+    color:#8f8c6f;
+    font-family: fantasy;
+}
+
+p {
+    color:#8f8c6f;
+    font-family: monospace;
+    font-size: large;
+}
+
+#inputresponse{
+    color: red;
+}
+
+body {
+    background-color: #f5f2d0;
+}
