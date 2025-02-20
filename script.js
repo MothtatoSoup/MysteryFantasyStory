@@ -4,7 +4,6 @@
 
 // ---- STORY CONTENT ----
 let StoryTitle = document.getElementById("Title"); // The Title of the page
-let SceneTitle = document.getElementById("STitle"); // The title of the scene
 
 let StoryText = document.getElementById("SText"); // The story text
 // List of content for the story text
@@ -12,6 +11,8 @@ let StoryText = document.getElementById("SText"); // The story text
 const STxtList = ["Scene 0","Scene 1","Scene 2","Scene 3","Scene 4","Scene 5","Scene 6","Scene 7","Scene 8","Scene 9","Scene 10","Scene 11","Scene 12","Scene 13"]
 let SceneImage = document.getElementById("image"); // The images displayed
 const StoryImages = ["FROG.jpg","FROG.jpg"] // List of images for the scene
+let BottomImage = document.getElementById("image2"); //Bottom Image
+const StoryImagesBottom = ["FROG.jpg","FROG.jpg"] // List of bottom images for the scene
 
 // THE SCENE
 let TheScene = 0; // What scene it is on
@@ -21,6 +22,7 @@ function SceneNum(num){
 
     // CHanges images based on scene based on scene
     SceneImage = SceneImage.src=StoryImages[num]; 
+    BottomImage = BottomImage.src=StoryImagesBottom[num]; 
     TheScene = num;
     console.log(TheScene)
 }
