@@ -117,6 +117,8 @@ document.getElementById("TheButton").addEventListener("click", function changeTh
             SceneNum(13);
             console.log("To Scene 13")
         }else if(TheScene == 8 || 9 || 10 || 11 || 12 || 13){// Endings or only has 1 input
+             ValidInput.textContent = "Not Valid Input Try again!!!"
+        }
             
 
     }else if(UserInput.value == 3){ // If user inputs 3
