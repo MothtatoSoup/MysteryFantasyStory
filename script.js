@@ -13,9 +13,9 @@ let SceneImage = document.getElementById("image"); // The images displayed
 // List of images for the scene
 const StoryImages = [/* 0*/"FROG.jpg",/* 1*/"FROG.jpg",/* 2*/"FROG.jpg",/* 3*/"FROG.jpg",/* 4*/"FROG.jpg",/* 5*/"FROG.jpg",/* 6*/"FROG.jpg",/* 7*/"FROG.jpg",/* 8*/"FROG.jpg",/* 9*/"FROG.jpg",/* 10*/"FROG.jpg",/* 11*/"FROG.jpg",/* 12*/"FROG.jpg",/* 13*/"FROG.jpg"] 
 
-let BottomImage = document.getElementById("image2"); //Bottom Image
+//let BottomImage = document.getElementById("image2"); //Bottom Image
 // List of bottom images for the scene
-const StoryImagesBottom = [/* 0*/"FROG.jpg",/* 1*/"FROG.jpg",/* 2*/"FROG.jpg",/* 3*/"FROG.jpg",/* 4*/"FROG.jpg",/* 5*/"FROG.jpg",/* 6*/"FROG.jpg",/* 7*/"FROG.jpg",/* 8*/"FROG.jpg",/* 9*/"FROG.jpg",/* 10*/"FROG.jpg",/* 11*/"FROG.jpg",/* 12*/"FROG.jpg",/* 13*/"FROG.jpg"] 
+//const StoryImagesBottom = [/* 0*/"FROG.jpg",/* 1*/"FROG.jpg",/* 2*/"FROG.jpg",/* 3*/"FROG.jpg",/* 4*/"FROG.jpg",/* 5*/"FROG.jpg",/* 6*/"FROG.jpg",/* 7*/"FROG.jpg",/* 8*/"FROG.jpg",/* 9*/"FROG.jpg",/* 10*/"FROG.jpg",/* 11*/"FROG.jpg",/* 12*/"FROG.jpg",/* 13*/"FROG.jpg"] 
 
 
 // THE SCENE
@@ -26,7 +26,7 @@ function SceneNum(num){
 
     // CHanges images based on scene based on scene
     SceneImage = SceneImage.src=StoryImages[num]; 
-    BottomImage = BottomImage.src=StoryImagesBottom[num]; 
+ //   BottomImage = BottomImage.src=StoryImagesBottom[num]; 
     TheScene = num;
     console.log(TheScene)
 }
