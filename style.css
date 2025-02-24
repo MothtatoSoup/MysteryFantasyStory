@@ -5,6 +5,16 @@
     text-align: center;
 }
 
+/* Styling the audio thing. All code from: */
+/*https://blog.shahednasser.com/how-to-style-an-audio-element/*/
+
+audio::-webkit-media-controls-panel {
+    background-color:#8f8c6f ;
+}
+audio::-webkit-media-controls-current-time-display,audio::-webkit-media-controls-time-remaining-display{
+    color:#f5f2d0;
+}
+
 /* Style buttons */
 #TheButton,#musicButton {
     color:#f5f2d0;
