@@ -30,11 +30,20 @@ function SceneNum(num){
     SceneImage.src=StoryImages[num]; 
  //   BottomImage = BottomImage.src=StoryImagesBottom[num]; 
     TheScene = num;
-    console.log(TheScene)
+    console.log(TheScene);
 }
 
 SceneNum(0); // Sets it to the beginning scene
-console.log('Scene 0')
+console.log('Scene 0');
+
+
+// MUSIC
+let BgMusic = document.getElementById("audio");
+BgMusic.play();
+
+document.getElementById("musicButton").addEventListener("click",BgMusic.play())
+
+
 
 // ---- INPUT ----
 let UserInput = document.getElementById("UserAns"); // What the user inputted

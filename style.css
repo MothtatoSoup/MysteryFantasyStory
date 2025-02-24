@@ -6,7 +6,7 @@
 }
 
 /* Style buttons */
-#TheButton {
+#TheButton,#musicButton {
     color:#f5f2d0;
     border: none;
     background-color:#8f8c6f ;
@@ -15,7 +15,7 @@
     border: 1px solid #8f8c6f;
 }
 
-#TheButton:hover{
+#TheButton:hover, #musicButton:hover{
     color:#8f8c6f;
     background-color:#f5f2d0;
     border: 1px solid #8f8c6f;
