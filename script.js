@@ -38,10 +38,9 @@ console.log('Scene 0');
 
 
 // MUSIC
-let BgMusic = document.getElementById("audio");
+let BgMusic = Audio("MysteriousAdventure.mp3") //This probably doesn't work but I tried.
 BgMusic.play();
 
-document.getElementById("musicButton").addEventListener("click",BgMusic.play())
 
 
 
