@@ -16,10 +16,10 @@ audio::-webkit-media-controls-current-time-display,audio::-webkit-media-controls
 }
 
 /* Style buttons */
-#TheButton,#musicButton,#deathBut {
-    color:#f5f2d0;
+#TheButton,#musicButton {
+    color: #f5f2d0;
     border: none;
-    background-color:#8f8c6f ;
+    background-color: #8f8c6f;
     border-radius: 4px;
     padding: 3px 20px;
     border: 1px solid #8f8c6f;
@@ -37,7 +37,7 @@ audio::-webkit-media-controls-current-time-display,audio::-webkit-media-controls
     height: 400px;
 }
 
-h1,h2 {
+h1 {
     color:#8f8c6f;
     font-family: fantasy;
 }
@@ -58,4 +58,27 @@ p {
 
 body {
     background-color: #f5f2d0;
+}
+
+#deathSection{
+    background-color: black;
+}
+
+#dH2, #dP, #deathN{
+    font-family: fantasy;
+    color: white;
+}
+
+#deathBut{
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 3px 20px;
+}
+
+#deathBut:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
 }
