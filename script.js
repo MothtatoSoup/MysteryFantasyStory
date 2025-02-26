@@ -44,26 +44,77 @@ console.log('Scene 0');
 let UserInput = document.getElementById("UserAns"); // What the user inputted
 let ValidInput = document.getElementById("inputresponse"); //What displays depending on the input
 
+//DEATH!!!
+const deathTypes = ["Fire","Poison","Guns"];
+let yourDeath = [];
+let howDed = 0
+let deathText = document.getElementById("deathN")
+deathText.innerHTML = ""
+let deathF = 0
+let deathP = 0
+let deathG = 0
+
+function deathNuggets(){ // decides what should be put in ur death
+    if (howDed == 1){
+        yourDeath.push("Fire");
+    }else if (howDed == 2){
+        yourDeath.push("Poison");
+    }else if (howDed == 3){
+        yourDeath.push("Guns");
+    }
+    console.log(yourDeath)
+}
+
+const theDeathButt = document.getElementById("deathBut")
+document.getElementById("deathBut").addEventListener("click",function findYourDeath(){ // decides what to display
+    console.log(yourDeath)
+    let deathNumb = yourDeath.length
+
+    for(i in yourDeath){
+        if(i == "Fire"){
+            deathF += 1
+            console.log("fire")
+        }else if(i == "Poison"){
+            deathP += 1
+            console.log("fpoison")
+        }else if(i == "Guns"){
+            deathG += 1
+            console.log("guns")
+        }
+    }
+
+    deathText.innerHTML = `Congradulations!! You died ${deathNumb} times!!! <br/><br/> You died: <br/>${deathF} times to fire<br/>${deathP} times to poison<br/>${deathG} times to guns`
+    console.log(yourDeath)
+})
+console.log(yourDeath)
 
 // S T O R Y     C O D E
 // ---------------------------------
 
 document.getElementById("TheButton").addEventListener("click", function changeTheScene(){ //Event listener, this function will change the scene based on what is inputed
+    deathText.innerHTML = ""
     if (UserInput.value == 1){
         console.log("User Input 1"); // If User inputs 1
         ValidInput.textContent = "";
         if(TheScene == 0){ // Goes to Scene 1
             SceneNum(1);
             console.log("To Scene 1")
+
+            howDed = 1
+            deathNuggets()
+
         }else if(TheScene == 1){ // Scene 1 is an ending
             SceneNum(0);
             console.log("To Scene 0")
+
         }else if(TheScene == 2){ // Goes to Scene 4
             SceneNum(4);
             console.log("To Scene 4")
         }else if(TheScene == 3){ // Scene 3 is an ending
             SceneNum(0)
+
             console.log("To Scene 0")
+            
         }else if(TheScene == 4){ // Goes to Scene 5
             SceneNum(5);
             console.log("To Scene 5")
@@ -73,27 +124,46 @@ document.getElementById("TheButton").addEventListener("click", function changeTh
         }else if(TheScene == 6){ // Goes to Scene 9
             SceneNum(9);
             console.log("To Scene 9")
+            howDed = 3
+            deathNuggets()
         }else if(TheScene == 7){// Goes to Scene 12
             SceneNum(12);
             console.log("To Scene 12")
+            howDed = 2
+            deathNuggets()
         }else if(TheScene == 8){// Goes to Scene 10 (only)
             SceneNum(10);
             console.log("To Scene 10")
+            howDed = 1
+            deathNuggets()
         }else if(TheScene == 9){// Scene 9 is an ending
             SceneNum(0);
+
             console.log("To Scene 0")
+            
         }else if(TheScene == 10){// Scene 10 is an ending
             SceneNum(0);
+
             console.log("To Scene 0")
+            howDed = 1
+            deathNuggets()
         }else if(TheScene == 11){// Goes to Scene 10 (Only)
             SceneNum(10);
             console.log("To Scene 10")
+            howDed = 1
+            deathNuggets()
         }else if(TheScene == 12){// Scene 12 is an ending
             SceneNum(0);
+
             console.log("To Scene 0")
+            howDed = 2
+            deathNuggets()
         }else if(TheScene == 13){// Scene 13 is an ending
             SceneNum(0);
             console.log("To Scene 0")
+
+            howDed = 2
+            deathNuggets()
         }
 
     }else if(UserInput.value == 2){ // If User inputs 2
@@ -107,6 +177,8 @@ document.getElementById("TheButton").addEventListener("click", function changeTh
         }else if(TheScene == 2){ // Goes to Scene 3
             SceneNum(3);
             console.log("To Scene 4")
+            howDed = 1
+            deathNuggets()
         }else if(TheScene == 3){ // Scene 3 is an ending
             ValidInput.textContent = "Not Valid Input Try again!!!";
         }else if(TheScene == 4){ // Goes to Scene 6
@@ -115,12 +187,16 @@ document.getElementById("TheButton").addEventListener("click", function changeTh
         }else if(TheScene == 5){ // Goes to Scene 9
             SceneNum(9);
             console.log("To Scene 9")
+            howDed = 1
+            deathNuggets()
         }else if(TheScene == 6){ // Goes to Scene 11
             SceneNum(11);
             console.log("To Scene 11")
         }else if(TheScene == 7){// Goes to Scene 13
             SceneNum(13);
             console.log("To Scene 13")
+            howDed = 2
+            deathNuggets()
         }else if(TheScene == 8 || 9 || 10 || 11 || 12 || 13){// Endings or only has 1 input
              ValidInput.textContent = "Not Valid Input Try again!!!"
         }
