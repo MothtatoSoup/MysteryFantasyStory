@@ -150,13 +150,9 @@ const difHints = [/*Scene 0*/"I AM THE HINT WORM HERE IS MY HINT: You have free 
 document.addEventListener("keydown", (event) => {
     if (event.key === "h" || event.key === "H") {
       // Display the hint for the current scene
-      for(thing in difHints){ // I did a for loop :3 kinda unnecesary but my story doesn't really have any use for one. Any other features seem unnecesary or just over complicating things
-        if(thing == TheScene){
-            hints.textContent = difHints[TheScene];
-        }else{
-            continue
-        }
-      }
+      hints.textContent = difHints[TheScene];
+    }else{
+        hints.textContent =""
     }
   });
 
