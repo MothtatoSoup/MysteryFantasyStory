@@ -38,19 +38,7 @@ console.log('Scene 0');
 
 
 // MUSIC
-
-window.addEventListener("DOMContentLoaded", event => { // code from https://forum.freecodecamp.org/t/how-to-play-mp3-in-the-background-music-automatically/308554
-    const audio = document.querySelector("audio");
-    audio.volume = 0.5;
-    audio.play();
-  });
-
-document.getElementById("musicButton").addEventListener("click", function MUSIC(){
-    const audio = new Audio("https://www.youtube.com/watch?v=-XmtfNHd7o8.mp3")
-    audio.volume = 0.5;
-    audio.play("https://www.youtube.com/watch?v=-XmtfNHd7o8.mp3");
-})
-
+// I tried but nothing would work :(
 
 // ---- INPUT ----
 let UserInput = document.getElementById("UserAns"); // What the user inputted
