@@ -38,10 +38,18 @@ console.log('Scene 0');
 
 
 // MUSIC
-let BgMusic = Audio("MysteriousAdventure.mp3") //This probably doesn't work but I tried.
-BgMusic.play();
 
+window.addEventListener("DOMContentLoaded", event => { // code from https://forum.freecodecamp.org/t/how-to-play-mp3-in-the-background-music-automatically/308554
+    const audio = document.querySelector("audio");
+    audio.volume = 0.5;
+    audio.play();
+  });
 
+document.getElementById("musicButton").addEventListener("click", function MUSIC(){
+    const audio = new Audio("https://www.youtube.com/watch?v=-XmtfNHd7o8.mp3")
+    audio.volume = 0.5;
+    audio.play("https://www.youtube.com/watch?v=-XmtfNHd7o8.mp3");
+})
 
 
 // ---- INPUT ----
@@ -108,8 +116,8 @@ document.getElementById("TheButton").addEventListener("click", function changeTh
             console.log("To Scene 2")
         }else if(TheScene == 1){ // Scene 1 is an ending
             ValidInput.textContent = "Not Valid Input Try again!!!";
-        }else if(TheScene == 2){ // Goes to Scene 4
-            SceneNum(4);
+        }else if(TheScene == 2){ // Goes to Scene 3
+            SceneNum(3);
             console.log("To Scene 4")
         }else if(TheScene == 3){ // Scene 3 is an ending
             ValidInput.textContent = "Not Valid Input Try again!!!";

@@ -8,15 +8,9 @@
 /* Styling the audio thing. All code from: */
 /*https://blog.shahednasser.com/how-to-style-an-audio-element/*/
 
-audio::-webkit-media-controls-panel {
-    background-color:#8f8c6f ;
-}
-audio::-webkit-media-controls-current-time-display,audio::-webkit-media-controls-time-remaining-display{
-    color:#f5f2d0;
-}
 
 /* Style buttons */
-#TheButton,#musicButton {
+#TheButton{
     color:#f5f2d0;
     border: none;
     background-color:#8f8c6f ;
@@ -25,7 +19,7 @@ audio::-webkit-media-controls-current-time-display,audio::-webkit-media-controls
     border: 1px solid #8f8c6f;
 }
 
-#TheButton:hover, #musicButton:hover{
+#TheButton:hover{
     color:#8f8c6f;
     background-color:#f5f2d0;
     border: 1px solid #8f8c6f;
