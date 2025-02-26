@@ -13,7 +13,7 @@ const STxtList = ["At the corner of Elven St lies a small cafe emitting the heav
 let SceneImage = document.getElementById("image"); // The images displayed
 
 // List of images for the scene
-const StoryImages = [/* 0*/"OutCafe.png",/* 1*/"InOffice.png",/* 2*/"Barista.png",/* 3*/"InOffice",/* 4*/"an image of coffee.png",/* 5*/"KrakenFishing.png",/* 6*/"KitsuneGold",/* 7*/"BlueFireForest.png",/* 8*/"KitsuneGold.png",/* 9*/"BlueFireForest.png",/* 10*/"BlueFireForest.png",/* 11*/"KrakenFishing.png",/* 12*/"Barista.png",/* 13*/"InOffice.png"] 
+const StoryImages = [/* 0*/"OutCafe.png",/* 1*/"InsideOffice.png",/* 2*/"Barista.png",/* 3*/"InsideOffice.png",/* 4*/"an image of coffee.png",/* 5*/"KrakenFishing.png",/* 6*/"KitsuneGold",/* 7*/"BlueFireForest.png",/* 8*/"KitsuneGold.png",/* 9*/"BlueFireForest.png",/* 10*/"BlueFireForest.png",/* 11*/"KrakenFishing.png",/* 12*/"Barista.png",/* 13*/"InsideOffice.png"] 
 
 //let BottomImage = document.getElementById("image2"); //Bottom Image
 // List of bottom images for the scene
@@ -70,7 +70,7 @@ document.getElementById("deathBut").addEventListener("click",function findYourDe
     console.log(yourDeath)
     let deathNumb = yourDeath.length
 
-    for(i in yourDeath){
+    for(i of yourDeath){
         if(i == "Fire"){
             deathF += 1
             console.log("fire")
@@ -161,9 +161,6 @@ document.getElementById("TheButton").addEventListener("click", function changeTh
         }else if(TheScene == 13){// Scene 13 is an ending
             SceneNum(0);
             console.log("To Scene 0")
-
-            howDed = 2
-            deathNuggets()
         }
 
     }else if(UserInput.value == 2){ // If User inputs 2
